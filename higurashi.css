@@ -1,0 +1,421 @@
+body {
+  background-color: #fffefe;
+  font-family: "Noto Serif JP", serif;
+  color: #170101;
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Serif JP", serif;
+  overflow-x: hidden;
+}
+.menu-toggle {
+  display: none;
+}
+.header {
+  padding-left: 23vw;
+  padding-right: 23vw;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #efe5e5;
+  height: 30vh;
+  flex-wrap: wrap;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.nav,
+.footer-nav {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav a,
+.footer-nav a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 550;
+  letter-spacing: 0.05em;
+}
+.sns {
+  padding-left: 7vw;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+/*写真*/
+.sns-img {
+  height: 26px;
+}
+.nav a:hover,
+.sns-img:hover {
+  opacity: 0.7;
+}
+.logo img {
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  height: 25vh;
+  display: block;
+  margin: 0 auto;
+}
+.footer-logo img {
+  height: 80px;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/*コンテンツ*/
+.title {
+  font-size: 38px;
+  margin-bottom: 5vh;
+}
+.live,
+.release,
+.about,
+.members,
+.contact {
+  text-align: center;
+  padding: 2rem;
+}
+.live {
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+.live ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 水平方向の中央揃え */
+  width: 100%;
+}
+
+.live li strong {
+  display: block;
+  text-align: left;
+}
+.live ul li {
+  list-style: none;
+  width: 100%; /* 必要に応じて幅を調整 */
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  border-bottom: 1px solid #ccc; /* 下線を追加 */
+  padding-bottom: 2rem; /* 下線とテキストの間隔を調整 */
+  margin-bottom: 2rem; /* li要素間の間隔を調整 */
+}
+
+.release {
+  list-style: none;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+.song-name-box {
+  display: flex;
+  align-items: center;
+}
+.black-box {
+  background-color: #170101;
+  width: 9px;
+  height: 40px;
+  border-radius: 3px;
+}
+.title-song {
+  margin-left: 1rem;
+  font-weight: 500;
+  font-size: 30px;
+  font-family: "Noto Serif JP", serif;
+  letter-spacing: 0.1em;
+}
+.matsuyuki-img {
+  margin-top: 15vh;
+  width: 30vw;
+}
+.matsuyuki-img:hover {
+  opacity: 0.7;
+}
+.text {
+  margin-left: 3rem;
+  width: 37vw;
+  line-height: 1.7rem;
+  text-align: left;
+}
+.release-content {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.accordion {
+  width: 100%;
+}
+
+.accordion-button {
+  background-color: #170101; /* 黒背景 */
+  color: #fff; /* 白文字 */
+  border: none; /* 枠線なし（必要なら追加してもOK） */
+  border-radius: 50%; /* 丸くする */
+  width: 20px;
+  height: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto; /* 中央寄せしたい時 */
+}
+
+.accordion-content {
+  display: none;
+  overflow: hidden;
+  padding: 0 18px;
+  background-color: #f9f9f9;
+}
+/*About*/
+.title {
+  font-size: 25px;
+  margin-bottom: 3vh;
+}
+.long-img {
+  width: 28vw;
+  height: 37vw;
+  object-fit: cover;
+}
+.normal-img {
+  width: 25vw;
+  height: 18vw;
+  object-fit: cover;
+}
+.blue-box {
+  width: 25vw;
+  height: 18vw;
+  background-color: #8f98ad;
+  margin-top: 0.85rem;
+}
+.purple-box {
+  width: 25vw;
+  height: 18vw;
+  background-color: #958fad;
+  margin-bottom: 1rem;
+}
+.about-part {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.mail-addres {
+  color: #c95c5c;
+}
+.note {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 2rem;
+}
+.accordion-button {
+  display: none;
+}
+
+.accordion-content {
+  display: block;
+}
+@media (max-width: 768px) {
+  .header {
+    margin-bottom: 2vh;
+  }
+  .logo img {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    height: 15vh;
+    padding-right: 13px;
+  }
+  .live ul {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .live ul li {
+    width: 100%;
+    box-sizing: border-box; /* ←これ超大事！パディングも含めて幅を管理 */
+  }
+  .sns-img {
+    height: 20px;
+  }
+  .title {
+    margin-bottom: ;
+  }
+  .sns {
+    padding-left: 12vw;
+  }
+  .hero {
+    padding-bottom: 3rem;
+  }
+  .live {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  .release {
+    margin: 0;
+    padding: 1rem;
+  }
+  .song-name-box {
+    padding-left: 7vw;
+  }
+  .title-song {
+    margin-left: 0.5rem;
+    font-size: 20px;
+  }
+  .release-content {
+    gap: 0;
+  }
+  .black-box {
+    width: 7px;
+    height: 20px;
+  }
+  .matsuyuki-img {
+    margin-top: 0;
+    width: 80%;
+  }
+  .release-content {
+    flex-direction: column;
+  }
+  .text {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .live {
+    padding: 0 5vw;
+  }
+  .about-part {
+    flex-direction: column;
+  }
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    background-color: #fffefe;
+    color: #170101;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    position: absolute; /* 絶対位置指定 */
+    top: 0; /* 上端に配置 */
+    left: 0; /* 左端に配置 */
+    z-index: 1000;
+  }
+
+  .nav {
+    display: none; /* デフォルトで非表示 */
+    flex-direction: column;
+    align-items: center;
+    background-color: #fffefe;
+    padding-top: 8vh;
+    padding-bottom: 3vh;
+    position: absolute; /* 絶対位置指定 */
+    top: 0; /* 上端に配置 */
+    left: 0; /* 左端に配置 */
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0.99;
+  }
+
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-list li {
+    margin: 10px 0;
+  }
+
+  .nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2rem;
+  }
+  .footer {
+    flex-wrap: nowrap;
+    padding: 3vw;
+    justify-content: initial;
+  }
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .accordion-button {
+    display: flex;
+    background-color: #170101;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+
+  .accordion-content {
+    display: none; /* 初期非表示 */
+  }
+
+  .accordion-content.active {
+    display: block;
+  }
+  .about-part {
+    flex-direction: column;
+    align-items: center; /* ← 横方向の中央寄せ！ */
+    gap: 1rem;
+  }
+
+  .long-img,
+  .normal-img,
+  .blue-box,
+  .purple-box {
+    width: 90%;
+    max-width: 90vw;
+    display: block;
+    margin: 0 auto; /* 念のため中央揃え保険 */
+    object-fit: cover;
+  }
+
+  .long-img {
+    height: auto;
+    max-height: 70vw; /* ← 高さ制限（デカすぎ回避） */
+  }
+
+  .normal-img {
+    height: auto;
+    max-height: 50vw; /* ← こっちも小さめに */
+  }
+
+  .blue-box,
+  .purple-box {
+    height: 45vw; /* 四角の高さも少し控えめに */
+  }
+  .footer-logo img{
+    margin-right:4rem;
+  } 
+  .footer {
+    position: relative; /* フッターを基準に絶対位置を指定するために必要 */
+    height:20vh;
+  }
+  
+  .sns-footer {
+    position: absolute; /* 絶対位置を指定 */
+    bottom: 0; /* フッターの下端に配置 */
+    right: 0; /* フッターの右端に配置 */
+    margin: 2rem; /* フッターの端から少し余白を追加 */
+  }
+  }
+}
