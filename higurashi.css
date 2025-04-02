@@ -112,6 +112,22 @@ body {
   padding-bottom: 2rem; /* 下線とテキストの間隔を調整 */
   margin-bottom: 2rem; /* li要素間の間隔を調整 */
 }
+.torioki-link-box{
+  width:13vw;
+  height:6vh;
+  background-color: #170101;
+  border-radius: 30px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  margin: 0 auto; 
+}
+.torioki-link-box:hover{
+  opacity:0.9;
+}
+.torioki-kochira{
+  color:#fffefe;
+}
 
 .release {
   list-style: none;
@@ -227,6 +243,90 @@ body {
 .accordion-content {
   display: block;
 }
+/* 取り置きフォーム */
+.torioki-title{
+text-align: center;
+}
+
+:root {
+  --green: #84AD47;
+  --red: #AD4747;
+  --blue: #4784AD;
+  --bg-light: #f9f9f9;
+  --font: 'Open Sans', sans-serif;
+}
+
+form {
+  width: 90%;
+  max-width: 500px;
+  margin: 5% auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: #f4f4f4;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--green);
+  background-color: #fff;
+}
+
+form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+form input[type="submit"] {
+  margin-top: 1.5rem;
+  background-color: var(--green);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  float: right;
+}
+
+form input[type="submit"]:hover {
+  background-color: #6f923c;
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 1.2rem;
+  }
+
+  form input[type="submit"] {
+    width: 100%;
+    float: none;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     margin-bottom: 2vh;
@@ -247,13 +347,13 @@ body {
     box-sizing: border-box; /* ←これ超大事！パディングも含めて幅を管理 */
   }
   .sns-img {
-    height: 20px;
+    height: 28px;
   }
   .title {
     margin-bottom: ;
   }
   .sns {
-    padding-left: 12vw;
+    padding-left: 8vw;
   }
   .hero {
     padding-bottom: 3rem;
@@ -417,5 +517,9 @@ body {
     right: 0; /* フッターの右端に配置 */
     margin: 2rem; /* フッターの端から少し余白を追加 */
   }
+  }
+  .torioki-link-box{
+    width:40vw;
+    height:5vh;
   }
 }

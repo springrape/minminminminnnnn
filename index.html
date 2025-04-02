@@ -53,6 +53,9 @@
         <li><strong>2025年 5月22日</strong> 六本木CLUB EDGE</li>
         <li><strong>2025年 6月 3日</strong> 下北沢LIVEHOLIC</li>
       </ul>
+      <div class="torioki-link-box" id="toriokiLink">
+        <h6 class="torioki-kochira">お取り置きはこちらから</h6>
+      </div>
     </section>
 
     <section class="release" id="release">
@@ -126,7 +129,7 @@
         >sonohigurashi45@gmail.com</a
       >
       <p class="note">
-        お問い合わせ・ライブのお誘いは上記メールアドレスよりお願いいたします。
+        お問い合わせ・ライブのお誘いは<br />上記メールアドレスよりお願いいたします。
       </p>
     </section>
 
@@ -141,12 +144,12 @@
       <ul class="footer-nav">
         <div>
           <li><a href="#live">Live</a></li>
-          <li><a href="#members">Members</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </div>
-        <div>
           <li><a href="#release">Release</a></li>
           <li><a href="#about">About</a></li>
+        </div>
+        <div>
+          <li><a href="#members">Members</a></li>
+          <li><a href="#contact">Contact</a></li>
         </div>
         <div class="sns-footer">
           <a href="#"
@@ -196,6 +199,12 @@
           button.addEventListener("click", function () {
             panel.classList.toggle("active");
           });
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        var toriokiLinkBox = document.getElementById("toriokiLink");
+        toriokiLinkBox.addEventListener("click", function () {
+          window.location.href = "torioki.html";
         });
       });
     </script>
