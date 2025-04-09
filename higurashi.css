@@ -643,6 +643,9 @@ form input[type="submit"]:hover {
   .torioki-form {
     margin-bottom: 8vh;
   }
+  .release-content {
+    flex-direction: column;
+  }
 }
 @media screen and (min-width: 769px) {
   .break-pc {
