@@ -14,7 +14,9 @@
   </head>
   <body>
     <div class="logo">
-      <img src="higurashi/higurashi01.png" alt="ひぐらしロゴ" />
+      <a href="index.html">
+        <img src="higurashi/higurashi01.png" alt="ひぐらしロゴ"
+      /></a>
     </div>
     <header class="header">
       <div class="menu-toggle" id="menu-toggle">☰</div>
@@ -44,17 +46,52 @@
     </header>
 
     <section class="hero">
-      <img src="higurashi/top-picture.png" alt="バンド写真" />
+      <img id="hero-image" src="higurashi/top-picture.png" alt="バンド写真" />
     </section>
 
     <section class="live" id="live">
       <h2 class="title">Live</h2>
       <ul>
-        <li><strong>2025年 5月22日</strong> 六本木CLUB EDGE</li>
-        <li><strong>2025年 6月 3日</strong> 下北沢LIVEHOLIC</li>
+        <li>
+          <div class="live-date">
+            <span class="date">2025年5月22日</span
+            ><span class="live-name">六本木CLUB EDGE</span>
+          </div>
+          <div class="torioki-link-box" id="toriokiLink">
+            <h6 class="torioki-kochira">お取り置きはこちらから</h6>
+          </div>
+        </li>
+        <li>
+          <div class="live-date">
+            <span class="date">2025年 6月2日</span
+            ><span class="live-name">下北沢LIVEHOLIC</span>
+          </div>
+          <div class="torioki-link-box" id="toriokiLink">
+            <h6 class="torioki-kochira">お取り置きはこちらから</h6>
+          </div>
+        </li>
       </ul>
-      <div class="torioki-link-box" id="toriokiLink">
-        <h6 class="torioki-kochira">お取り置きはこちらから</h6>
+    </section>
+
+    <section class="about" id="about">
+      <h2 class="title">About</h2>
+      <div class="about-container">
+        <div class="about-image">
+          <img src="higurashi/higurashi-long.png" alt="ひぐらしメンバー" />
+        </div>
+        <div class="about-text">
+          <h5 class="policy-title">
+            ひぐらしが目指す<span class="break"></span>音楽。
+          </h5>
+          <p>
+            ひぐらしの楽曲制作は「音探しの旅」とも言えます。<br />
+            特に目的地は決まっていません。<br />
+            道中偶然見つけた、綺麗な音を拾う。<span class="break-pc"></span>
+            これの繰り返しです。<br />
+            それを同じように綺麗だと思ってくれる人がいるのなら、その人にその音が届いたら嬉しいです。
+          </p>
+          <a href="about.html" class="more-button">もっと見る</a>
+        </div>
       </div>
     </section>
 
@@ -62,28 +99,40 @@
       <h2 class="title">Release</h2>
       <div class="release-content">
         <div>
-          <a
-            href="https://soundcloud.com/onbq5fg7c6pd/d6f678d4-f976-4502-b3df-b4aab66a61b0?ref=clipboard&p=i&c=1&si=157EB105FC884E7BA09E7094710778D0&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-          >
-            <img
-              src="higurashi/matsuyuki.png"
-              class="matsuyuki-img"
-              alt="待雪草カバー"
-          /></a>
+          <div>
+            <a
+              href="https://soundcloud.com/onbq5fg7c6pd/d6f678d4-f976-4502-b3df-b4aab66a61b0?ref=clipboard&p=i&c=1&si=157EB105FC884E7BA09E7094710778D0&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+            >
+              <img
+                src="higurashi/matsuyuki.png"
+                class="matsuyuki-img"
+                alt="待雪草カバー"
+            /></a>
+          </div>
+          <div>
+            <a
+              href="https://soundcloud.com/onbq5fg7c6pd/d6f678d4-f976-4502-b3df-b4aab66a61b0?ref=clipboard&p=i&c=1&si=157EB105FC884E7BA09E7094710778D0&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+            >
+              <div class="torioki-link-box">
+                <h6 class="torioki-kochira">Sound Cloudにて配信中</h6>
+              </div></a
+            >
+          </div>
         </div>
+
         <div class="text">
           <div class="song-name-box">
             <div class="black-box"></div>
             <div class="title-song">待雪草</div>
             <button class="accordion-button" data-target="#matsuyuki-text">
-              +
+              ▲
             </button>
           </div>
           <div class="accordion">
             <div class="accordion" id="matsuyuki-text">
               <div class="accordion-content">
                 <p>
-                  　寒い冬の夜だった。視界が悪くなるくらいの雪が降っていた。<br />街を歩くのは私一人だった。寒い。指の感覚がなくなっていく。とても寒い。ふと路肩に目をやると一輪の花が咲いていた。花屋を営んでいた私はすぐにその花の名前が分かった。「待雪草。」花言葉は「希望。」皮肉なものだ。こんな絶望の淵にいる私が最後に見る花が「希望」だなんて。寒さのあまり両手をズボンのポケットに入れる。何か箱状の物の感触がする。マッチ箱だ。私が幼い頃、よく母親が読み聞かせてくれていた童話を思い出す。「マッチ棒売りの少女。」同じような冬の夜、マッチが一本も売れずに凍えていた少女の話だった。彼女がマッチを擦ると、大好きだった祖母の姿が炎に浮かび上がる。それが消えないように少女はマッチを擦り続ける。やがて少女は祖母に連れられ天へと昇っていく。そんな話だった。私は目の前の花を燃やしたいという強い衝動に駆られる。箱からマッチを一本取り出して擦る。そして炎を一輪の待雪草に移す。さあ燃えろ。燃えるんだ。真っ白な雪景色の中真っ赤な炎があたりを照らす。童話の少女と同じように炎を覗き込むと、そこには桜並木が映っていた。一人で並木道を歩く男性の後ろ姿が見える。私は食い入るように彼を見つめる。ひどく見覚えのある背中だった。ふと待雪草に別の花言葉があったことを思い出す。ほとんど真反対の意味だった。ああそうか。皮肉なんかじゃなかった。これはきっとあなたからのプレゼントなんだ。あたり一面の雪が溶け、所々に緑色の芽が顔を出している。<br />私は微笑みながら目を閉じる。
+                  　寒い冬の夜だった。視界が悪くなるくらいの雪が降っていた。<br />街を歩くのは私一人だった。寒い。指の感覚がなくなっていく。とても寒い。ふと路肩に目をやると一輪の花が咲いていた。花屋を営んでいた私はすぐにその花の名前が分かった。「待雪草。」花言葉は「希望。」皮肉なものだ。こんな絶望の淵にいる私が最後に見る花が「希望」だなんて。寒さのあまり両手をズボンのポケットに入れる。何か箱状の物の感触がする。マッチ箱だ。私が幼い頃、よく母親が読み聞かせてくれていた童話を思い出す。「マッチ棒売りの少女。」同じような冬の夜、マッチが一本も売れずに凍えていた少女の話だった。彼女がマッチを擦ると、大好きだった祖母の姿が炎に浮かび上がる。それが消えないように少女はマッチを擦り続ける。やがて少女は祖母に連れられ天へと昇っていく。そんな話だった。私は目の前の花を燃やしたいという強い衝動に駆られる。箱からマッチを一本取り出して擦る。そして炎を一輪の待雪草に移す。さあ燃えろ。燃えるんだ。真っ白な雪景色の中真っ赤な炎があたりを照らす。童話の少女と同じように炎を覗き込むと、そこには桜並木が映っていた。一人で並木道を歩く男性の後ろ姿が見える。私は食い入るように彼を見つめる。ひどく見覚えのある背中だった。ふと待雪草に別の花言葉があったことを思い出す。ほとんど真反対の意味だった。ああそうか。皮肉なんかじゃなかった。これはきっとあなたからのプレゼントなんだ。あたり一面の雪が溶け、所々に緑色の芽が顔を出している。私は微笑みながら目を閉じる。
                 </p>
               </div>
             </div>
@@ -92,7 +141,7 @@
       </div>
     </section>
 
-    <section class="about" id="about">
+    <!--<section class="about" id="about">
       <h2 class="title">About</h2>
       <div class="about-part">
         <img
@@ -117,7 +166,7 @@
           />
         </div>
       </div>
-    </section>
+    </section>-->
 
     <!--<section class="members" id="members">
       <h2 class="title">Members</h2>
@@ -197,7 +246,9 @@
           );
 
           button.addEventListener("click", function () {
-            panel.classList.toggle("active");
+            const isActive = panel.classList.toggle("active");
+            // ▲ → ▼ に切り替え
+            button.textContent = isActive ? "▼" : "▲";
           });
         });
       });
@@ -206,6 +257,50 @@
         toriokiLinkBox.addEventListener("click", function () {
           window.location.href = "torioki.html";
         });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = [
+          "higurashi/top-picture.png",
+          "higurashi/higurashi-forest.png",
+          "higurashi/higurashi-peace.png",
+          "higurashi/higurashi-smile.png",
+        ];
+        let currentIndex = 0;
+        const heroImage = document.getElementById("hero-image");
+
+        function changeImage() {
+          currentIndex = (currentIndex + 1) % images.length;
+          heroImage.src = images[currentIndex];
+        }
+
+        setInterval(changeImage, 4000); // 3秒ごとに画像を切り替える
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        const aboutSection = document.querySelector(".about-container");
+        const releaseSection = document.querySelector(".release-content");
+
+        function handleScroll() {
+          const triggerPoint = window.innerHeight * 0.8;
+
+          // About
+          if (aboutSection && !aboutSection.classList.contains("show")) {
+            const aboutTop = aboutSection.getBoundingClientRect().top;
+            if (aboutTop < triggerPoint) {
+              aboutSection.classList.add("show");
+            }
+          }
+
+          // Release
+          if (releaseSection && !releaseSection.classList.contains("show")) {
+            const releaseTop = releaseSection.getBoundingClientRect().top;
+            if (releaseTop < triggerPoint) {
+              releaseSection.classList.add("show");
+            }
+          }
+        }
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // ページロード時にもチェック
       });
     </script>
   </body>

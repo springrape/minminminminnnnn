@@ -88,6 +88,9 @@ body {
   text-align: center;
   padding: 2rem;
 }
+.live ul li {
+  display: flex;
+}
 .live {
   margin-left: 20vw;
   margin-right: 20vw;
@@ -97,6 +100,7 @@ body {
   flex-direction: column;
   align-items: center; /* 水平方向の中央揃え */
   width: 100%;
+  margin-top: 9vh;
 }
 
 .live li strong {
@@ -112,21 +116,33 @@ body {
   padding-bottom: 2rem; /* 下線とテキストの間隔を調整 */
   margin-bottom: 2rem; /* li要素間の間隔を調整 */
 }
-.torioki-link-box{
-  width:13vw;
-  height:6vh;
-  background-color: #170101;
-  border-radius: 30px;
-  display:flex;
-  justify-content:center;
+.date {
+  margin-right: 5vw;
+}
+.torioki-link-box {
+  width: 10vw;
+  height: 6vh;
+  background-color: #ffffff; /* 白背景 */
+  border: 1px solid #170101; /* 黒い枠線 */
+  border-radius: 5px; /* 四角っぽく（角を少し丸め） */
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 0 auto; 
+  margin: 0 auto;
+  transition: all 0.3s ease; /* スムーズな変化 */
 }
-.torioki-link-box:hover{
-  opacity:0.9;
+
+.torioki-link-box:hover {
+  background-color: #170101; /* 背景を黒に */
 }
-.torioki-kochira{
-  color:#fffefe;
+
+.torioki-kochira {
+  color: #170101; /* 通常時は黒文字 */
+  transition: color 0.3s ease;
+}
+
+.torioki-link-box:hover .torioki-kochira {
+  color: #ffffff; /* ホバー時は白文字に */
 }
 
 .release {
@@ -134,6 +150,22 @@ body {
   margin-left: 10vw;
   margin-right: 10vw;
 }
+.release-content {
+  display: flex; /* ← これ大事！これが消えると縦並びになる */
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 5vh;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.release-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .song-name-box {
   display: flex;
   align-items: center;
@@ -160,11 +192,13 @@ body {
 }
 .text {
   margin-left: 3rem;
-  width: 37vw;
-  line-height: 1.7rem;
+  width: 40vw;
+  line-height: 1.9rem;
   text-align: left;
+  letter-spacing: 0.09rem;
 }
 .release-content {
+  margin-top: 5vh;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -174,8 +208,7 @@ body {
 }
 
 .accordion-button {
-  background-color: #170101; /* 黒背景 */
-  color: #fff; /* 白文字 */
+  color: #170101; /* 白文字 */
   border: none; /* 枠線なし（必要なら追加してもOK） */
   border-radius: 50%; /* 丸くする */
   width: 20px;
@@ -243,27 +276,96 @@ body {
 .accordion-content {
   display: block;
 }
+
+/* about新しいやつ */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 2px;
+  margin-right: 3vw;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column; /* 縦方向に配置 */
+  align-items: center;
+  max-width: 460px;
+  font-size: 16px;
+  line-height: 3.5;
+  letter-spacing: 0.06rem;
+  font-weight: medium;
+  text-align: left;
+}
+
+.about-text h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.policy-title {
+  font-size: 33px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.more-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 24px;
+  font-size: 14px;
+  border: 1px solid #5e4b8b;
+  border-radius: 20px;
+  color: #5e4b8b;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.more-button:hover {
+  background-color: #5e4b8b;
+  color: white;
+}
+.about-container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.about-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* 取り置きフォーム */
-.torioki-title{
-text-align: center;
+.torioki-title {
+  text-align: center;
 }
 
 :root {
-  --green: #84AD47;
-  --red: #AD4747;
-  --blue: #4784AD;
+  --green: #d4bcbc;
+  --red: #ad4747;
+  --blue: #4784ad;
   --bg-light: #f9f9f9;
-  --font: 'Open Sans', sans-serif;
+  --font: "Open Sans", sans-serif;
 }
 
 form {
   width: 90%;
-  max-width: 500px;
+  max-width: 700px;
+  height: 50vh;
   margin: 5% auto;
   background: white;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
 }
 
 form label {
@@ -278,7 +380,7 @@ form input[type="text"],
 form input[type="email"],
 form input[type="number"],
 form textarea {
-  width: 100%;
+  width: 90%;
   padding: 0.8rem 1rem;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -313,7 +415,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-  background-color: #6f923c;
+  background-color: #efe5e5;
 }
 
 @media (max-width: 480px) {
@@ -345,6 +447,10 @@ form input[type="submit"]:hover {
   .live ul li {
     width: 100%;
     box-sizing: border-box; /* ←これ超大事！パディングも含めて幅を管理 */
+    flex-direction: column;
+  }
+  .live-date {
+    margin-bottom: 3vh;
   }
   .sns-img {
     height: 28px;
@@ -361,6 +467,18 @@ form input[type="submit"]:hover {
   .live {
     margin-left: 5vw;
     margin-right: 5vw;
+  }
+  .about-part {
+    flex-direction: column;
+  }
+  .policy-title {
+    font-size: 30px;
+    line-height: 2;
+    text-align: center;
+    letter-spacing: 0.08rem;
+  }
+  .policy-title .break {
+    display: block; /* スマホ版で改行を適用 */
   }
   .release {
     margin: 0;
@@ -383,19 +501,16 @@ form input[type="submit"]:hover {
   .matsuyuki-img {
     margin-top: 0;
     width: 80%;
+    margin-bottom: 2.5vh;
   }
-  .release-content {
-    flex-direction: column;
-  }
+
   .text {
     margin: 0 auto;
     width: 90%;
+    line-height: 2;
   }
   .live {
     padding: 0 5vw;
-  }
-  .about-part {
-    flex-direction: column;
   }
   .menu-toggle {
     display: block;
@@ -452,17 +567,15 @@ form input[type="submit"]:hover {
     gap: 0;
   }
   .accordion-button {
-    display: flex;
-    background-color: #170101;
-    color: #fff;
+    display: inline;
+    background: none;
     border: none;
-    border-radius: 50%;
+    color: #170101;
     font-size: 1.5rem;
     font-weight: bold;
-    align-items: center;
-    justify-content: center;
-    margin-left: 1rem;
-    margin-top: 1rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    margin-top: 1.3vh;
   }
 
   .accordion-content {
@@ -471,6 +584,12 @@ form input[type="submit"]:hover {
 
   .accordion-content.active {
     display: block;
+  }
+  .song-name-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 左寄せ */
+    gap: 0.5rem;
   }
   .about-part {
     flex-direction: column;
@@ -503,23 +622,30 @@ form input[type="submit"]:hover {
   .purple-box {
     height: 45vw; /* 四角の高さも少し控えめに */
   }
-  .footer-logo img{
-    margin-right:4rem;
-  } 
+  .footer-logo img {
+    margin-right: 4rem;
+  }
   .footer {
     position: relative; /* フッターを基準に絶対位置を指定するために必要 */
-    height:20vh;
+    height: 20vh;
   }
-  
+
   .sns-footer {
     position: absolute; /* 絶対位置を指定 */
     bottom: 0; /* フッターの下端に配置 */
     right: 0; /* フッターの右端に配置 */
     margin: 2rem; /* フッターの端から少し余白を追加 */
   }
+  .torioki-link-box {
+    width: 40vw;
+    height: 5vh;
   }
-  .torioki-link-box{
-    width:40vw;
-    height:5vh;
+  .torioki-form {
+    margin-bottom: 8vh;
+  }
+}
+@media screen and (min-width: 769px) {
+  .break-pc {
+    display: block; /* PC版で改行を適用 */
   }
 }
