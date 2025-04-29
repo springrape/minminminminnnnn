@@ -21,12 +21,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
   background-color: #efe5e5;
   height: 30vh;
-  flex-wrap: wrap;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  padding-left: 25vw;
+  padding-right: 25vw;
 }
 
 .nav,
@@ -42,14 +40,18 @@ body {
 .footer-nav a {
   text-decoration: none;
   color: inherit;
-  font-weight: 550;
+  font-weight: 400;
   letter-spacing: 0.05em;
+  line-height: 2rem;
 }
 .sns {
   padding-left: 7vw;
   display: flex;
   align-items: center;
   gap: 0.9rem;
+}
+.sns-footer {
+  margin-left: 7vw;
 }
 /*写真*/
 .sns-img {
@@ -80,6 +82,7 @@ body {
   font-size: 38px;
   margin-bottom: 5vh;
 }
+
 .live,
 .release,
 .about,
@@ -88,14 +91,11 @@ body {
   text-align: center;
   padding: 2rem;
 }
-.live ul li {
-  display: flex;
-}
 .live {
   margin-left: 20vw;
   margin-right: 20vw;
 }
-.live ul {
+.live-list {
   display: flex;
   flex-direction: column;
   align-items: center; /* 水平方向の中央揃え */
@@ -103,18 +103,24 @@ body {
   margin-top: 9vh;
 }
 
-.live li strong {
-  display: block;
-  text-align: left;
-}
-.live ul li {
-  list-style: none;
+.live-item {
   width: 100%; /* 必要に応じて幅を調整 */
   display: flex;
   align-items: center; /* 垂直方向の中央揃え */
   border-bottom: 1px solid #ccc; /* 下線を追加 */
   padding-bottom: 2rem; /* 下線とテキストの間隔を調整 */
   margin-bottom: 2rem; /* li要素間の間隔を調整 */
+}
+
+.live-date p {
+  margin-right: 3vw;
+  margin-left: 3vw;
+}
+.live-item {
+  display: flex;
+}
+.live-date {
+  display: flex;
 }
 .date {
   margin-right: 5vw;
@@ -139,12 +145,16 @@ body {
 .torioki-kochira {
   color: #170101; /* 通常時は黒文字 */
   transition: color 0.3s ease;
+  list-style: none;
 }
 
 .torioki-link-box:hover .torioki-kochira {
   color: #ffffff; /* ホバー時は白文字に */
 }
-
+.torioki-kochira a {
+  color: inherit; /* 親の色を引き継ぐ（今だと#170101） */
+  text-decoration: none; /* 下線を消す */
+}
 .release {
   list-style: none;
   margin-left: 10vw;
@@ -280,7 +290,6 @@ body {
 /* about新しいやつ */
 .about-container {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 40px;
   max-width: 1000px;
@@ -360,7 +369,7 @@ body {
 form {
   width: 90%;
   max-width: 700px;
-  height: 50vh;
+  height: 35vh;
   margin: 5% auto;
   background: white;
   padding: 2rem;
@@ -418,6 +427,16 @@ form input[type="submit"]:hover {
   background-color: #efe5e5;
 }
 
+/* カミングスーン */
+.container-comingsoon {
+  height: 90vw;
+  position: relative;
+}
+.coming-soon-p {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
 @media (max-width: 480px) {
   form {
     padding: 1.2rem;
@@ -449,9 +468,11 @@ form input[type="submit"]:hover {
     box-sizing: border-box; /* ←これ超大事！パディングも含めて幅を管理 */
     flex-direction: column;
   }
+
   .live-date {
     margin-bottom: 3vh;
   }
+
   .sns-img {
     height: 28px;
   }
@@ -468,6 +489,7 @@ form input[type="submit"]:hover {
     margin-left: 5vw;
     margin-right: 5vw;
   }
+
   .about-part {
     flex-direction: column;
   }
@@ -504,10 +526,13 @@ form input[type="submit"]:hover {
     margin-bottom: 2.5vh;
   }
 
+  .about-container {
+    flex-direction: column;
+  }
   .text {
     margin: 0 auto;
     width: 90%;
-    line-height: 2;
+    line-height: 1;
   }
   .live {
     padding: 0 5vw;
